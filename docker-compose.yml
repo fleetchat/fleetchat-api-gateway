@@ -10,8 +10,7 @@ services:
       - NODE_ENV=production
     restart: unless-stopped
     networks:
-      - shared-network
+      - mynetwork
 
 networks:
-  shared-network:
-    name: shared-network
+  mynetwork:
