@@ -4,8 +4,8 @@ FROM node:22.10-alpine
 WORKDIR /app
 # Копируем package.json и package-lock.json
 COPY package*.json ./
-# Устанавливаем только продакшен зависимости
-RUN npm ci --omit=dev
+# Устанавливаем все зависимости, включая devDependencies
+RUN npm ci
 # Копируем весь исходный код
 COPY . .
 # Сборка проекта Nest.js
