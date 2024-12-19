@@ -5,7 +5,7 @@ WORKDIR /app
 # Копируем package.json и package-lock.json
 COPY package*.json ./
 # Устанавливаем только продакшен зависимости
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 # Копируем весь исходный код
 COPY . .
 # Сборка проекта Nest.js
