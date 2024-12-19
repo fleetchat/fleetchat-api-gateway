@@ -9,3 +9,9 @@ services:
     environment:
       - NODE_ENV=production
     restart: unless-stopped
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    external: true
